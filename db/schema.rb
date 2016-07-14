@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160714005058) do
+ActiveRecord::Schema.define(version: 20160714160803) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,43 @@ ActiveRecord::Schema.define(version: 20160714005058) do
     t.integer  "region_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+  end
+
+  create_table "reports", force: :cascade do |t|
+    t.string   "su_report_unix_time"
+    t.integer  "startdate_gmt"
+    t.string   "video_url"
+    t.string   "image_urls",             default: [],              array: true
+    t.string   "surfrange",              default: [],              array: true
+    t.string   "surfmin",                default: [],              array: true
+    t.string   "is_current"
+    t.string   "surftext",               default: [],              array: true
+    t.string   "report_time"
+    t.string   "startdate_pretty_gmt"
+    t.string   "reporter"
+    t.string   "occasional"
+    t.string   "units"
+    t.string   "su_report_time"
+    t.string   "surfpeak",               default: [],              array: true
+    t.string   "report_day"
+    t.string   "reportdate"
+    t.string   "report_period"
+    t.string   "islola",                 default: [],              array: true
+    t.string   "short_term_forecast"
+    t.string   "greeting"
+    t.string   "weathertext",            default: [],              array: true
+    t.string   "is_external"
+    t.string   "canexceed",              default: [],              array: true
+    t.string   "surfmax",                default: [],              array: true
+    t.string   "generalcondition",       default: [],              array: true
+    t.string   "regional_summary"
+    t.datetime "startdate_local"
+    t.string   "startdate_pretty_local"
+    t.string   "generaltext",            default: [],              array: true
+    t.integer  "surf_spot_id"
+    t.integer  "payload_id"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
   create_table "surf_spots", force: :cascade do |t|
