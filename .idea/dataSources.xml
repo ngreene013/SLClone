@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2818523397">
+    <data-source source="LOCAL" name="PostgreSQL - SurfLine_development@localhost" uuid="b2b1e68e-7c18-4de6-9943-f12c89ece081">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/SurfLine_development</jdbc-url>
+    </data-source>
+  </component>
+</project>

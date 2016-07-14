@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 20160714162033) do
     t.string   "location"
     t.integer  "location_id"
     t.string   "new_hd_cam"
+    t.string   "type"
     t.integer  "report_id"
     t.integer  "forecast_id"
     t.string   "place_id"

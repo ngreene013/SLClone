@@ -13,4 +13,26 @@ class Forecast < ActiveRecord::Base
 
 
 
+  def self.display_day(surfrange_string)
+    regex = /\d{1,2}\/\d{1,2}\/\d{4}/
+    date = surfrange_string[regex] #.strftime("%A")
+    Date.strptime("{ #{date}}", "{ %m/%d/%Y }").strftime('%A')
+  end
+
+
+  #return an array of data for tiles formatted as html table contents
+  def forecast_tiles(days=14)
+    tiles = []
+    (0...days).each do |day|
+      tiles << "<td><div class='forecast-tile-day #{self.generalcondition[day].gsub(' ', '-')}' title='#{self.generaltext[day]}'>
+        <div class='forecast-day'>#{Forecast.display_day(self.surfrange[day])}</div>
+        <p>#{self.generalcondition[day].humanize}</p>
+        #{self.surfrange[day].humanize}
+        <p>#{self.surftext[day].humanize}.<br></p><td>"
+    end
+    tiles
+  end
+
+
+
 end

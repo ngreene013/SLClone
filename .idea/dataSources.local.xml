@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - SurfLine_development@localhost" uuid="b2b1e68e-7c18-4de6-9943-f12c89ece081">
+      <secret-storage>master_key</secret-storage>
+      <schema-pattern>SurfLine_development.*</schema-pattern>
+      <default-schemas>SurfLine_development.*</default-schemas>
+    </data-source>
+  </component>
+</project>
