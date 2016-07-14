@@ -11,10 +11,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160714160803) do
+ActiveRecord::Schema.define(version: 20160714162033) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "forecasts", force: :cascade do |t|
+    t.string   "weathertext",            default: [],              array: true
+    t.string   "surfmax",                default: [],              array: true
+    t.string   "surftext",               default: [],              array: true
+    t.string   "is_current"
+    t.string   "units"
+    t.string   "startdate_pretty_local"
+    t.string   "startdate_pretty_gmt"
+    t.string   "generaltext",            default: [],              array: true
+    t.string   "generalcondition",       default: [],              array: true
+    t.string   "surfmin",                default: [],              array: true
+    t.string   "surfpeak",               default: [],              array: true
+    t.string   "surfrange",              default: [],              array: true
+    t.integer  "startdate_gmt"
+    t.string   "canexceed",              default: [],              array: true
+    t.string   "islola",                 default: [],              array: true
+    t.datetime "startdate_local"
+    t.integer  "region_id"
+    t.integer  "place_id"
+    t.integer  "payload_id"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+  end
 
   create_table "payloads", force: :cascade do |t|
     t.string   "timezonestring"
