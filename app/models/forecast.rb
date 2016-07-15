@@ -31,7 +31,7 @@ class Forecast < ActiveRecord::Base
         #{self.surfrange[day].humanize}
         <p>#{self.surftext[day].humanize}.<br></p><td>"
     end
-    tiles.join(',').html_safe
+    tiles.join('').html_safe || 'sorry, no forecast here'
   end
 
 

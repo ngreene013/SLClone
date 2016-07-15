@@ -7,6 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header>
+  <div class="left-header">
+    <%= link_to 'Home', root_path%>
+  </div>
+  <div class="right-header" %>
+    <% link_to 'Logout' %>
+  </div>
+
+</header>
 
 <%= yield %>
 

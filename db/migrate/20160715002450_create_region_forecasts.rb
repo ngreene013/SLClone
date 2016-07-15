@@ -4,6 +4,7 @@ class CreateRegionForecasts < ActiveRecord::Migration
       #t.integer :surf_spot_id
       #t.integer :forecast_id
       t.belongs_to :surf_spot, index: true
+      t.integer :region_id, index: true
       t.belongs_to :forecast, index: true
 
       t.timestamps null: false

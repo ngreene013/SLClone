@@ -1,9 +1,5 @@
-%h2= @surf_spot.spot_full_name
-
-.forecast-section
-  %table.forecast-table
-    %tr
-      %th Forecast
-    %tr
-      .spot-forecast
-      = @surf_spot.latest_forecast.forecast_tiles
+.show-spot-page
+  %h2= @surf_spot.spot_full_name
+  = render partial: "stream"
+  = render partial: "report/report"
+  = render partial: "forecast/forecast_tiles"

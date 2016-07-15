@@ -1,0 +1,9 @@
+.forecast-section
+  %h3.forecast-label Forecast
+  %button.refresh-forecast= link_to 'refresh'
+
+  %h5.forecast-start-date= @surf_spot.latest_forecast.startdate_pretty_local
+  %table.forecast-table
+    %tr
+      .spot-forecast
+      = @surf_spot.latest_forecast.forecast_tiles if @surf_spot.latest_forecast

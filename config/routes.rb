@@ -2,7 +2,10 @@ Rails.application.routes.draw do
 
   root 'surf_spots#index'
 
-  resources :surf_spots, only: [:index,:show]
+  get 'surf_spots/:id/update_forecast' => 'surf_spots#update_forecast', as: :update_forecast
+
+  resources :surf_spots #, only: [:index, :show, :refresh_forecast]
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
