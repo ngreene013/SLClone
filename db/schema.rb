@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160714162033) do
+ActiveRecord::Schema.define(version: 20160715002450) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -67,12 +67,15 @@ ActiveRecord::Schema.define(version: 20160714162033) do
     t.datetime "updated_at",                          null: false
   end
 
-  create_table "regions", force: :cascade do |t|
+  create_table "region_forecasts", force: :cascade do |t|
     t.integer  "surf_spot_id"
-    t.integer  "region_id"
+    t.integer  "forecast_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
+
+  add_index "region_forecasts", ["forecast_id"], name: "index_region_forecasts_on_forecast_id", using: :btree
+  add_index "region_forecasts", ["surf_spot_id"], name: "index_region_forecasts_on_surf_spot_id", using: :btree
 
   create_table "reports", force: :cascade do |t|
     t.string   "su_report_unix_time"

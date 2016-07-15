@@ -1,0 +1,9 @@
+%h2= @surf_spot.spot_full_name
+
+.forecast-section
+  %table.forecast-table
+    %tr
+      %th Forecast
+    %tr
+      .spot-forecast
+      = @surf_spot.latest_forecast.forecast_tiles

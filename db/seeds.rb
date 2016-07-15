@@ -151,6 +151,5 @@ links = [
 # t.string :spot_cam_name
 links.each do |entry|
   SurfSpot.create(spot_full_name: entry[0], spot_city_name: entry[1], spot_cam_name: entry[2], id: entry[3], region_id: entry[4])
-  Region.create(surf_spot_id: entry[3], region_id: entry[4])
 end
 

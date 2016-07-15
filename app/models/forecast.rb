@@ -1,6 +1,7 @@
 class Forecast < ActiveRecord::Base
-  has_one :region
-  has_many :surf_spots, through: :region
+
+  has_many :region_forecasts
+  has_many :surf_spots, through: :region_forecasts
   belongs_to :payload
 
   def self.refresh(region_id)
@@ -30,7 +31,7 @@ class Forecast < ActiveRecord::Base
         #{self.surfrange[day].humanize}
         <p>#{self.surftext[day].humanize}.<br></p><td>"
     end
-    tiles
+    tiles.join(',').html_safe
   end
 
 

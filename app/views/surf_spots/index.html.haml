@@ -1,3 +1,3 @@
 .surf-spot-index-page
   - @surf_spots.each do |spot|
-    %p=spot.name
+    %li= link_to spot.spot_full_name, spot
