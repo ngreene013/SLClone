@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   root 'surf_spots#index'
 
   get 'surf_spots/:id/update_forecast' => 'surf_spots#update_forecast', as: :update_forecast

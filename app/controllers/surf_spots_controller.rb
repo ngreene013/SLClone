@@ -1,5 +1,8 @@
 class SurfSpotsController < ApplicationController
 
+  before_action :authenticate_user!
+
+
   def index
     @surf_spots = SurfSpot.all
   end

@@ -1,6 +1,7 @@
 class SurfSpot < ActiveRecord::Base
   require 'functions/sl_functions'
 
+
   has_many :reports
   has_many :region_forecasts
   has_many :forecasts, through: :region_forecasts, foreign_key: :region_id
