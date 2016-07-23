@@ -11,9 +11,10 @@ class SurfSpotsController < ApplicationController
     @surf_spot = SurfSpot.find(params['id'])
   end
 
-  def refresh_forecast
+  def update_forecast
     @surf_spot = SurfSpot.find(params['id'])
-    @surf_spot.refresh_forecast
+    @surf_spot.update_forecast
+    render 'show'
   end
 
 end
