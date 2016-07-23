@@ -2,7 +2,10 @@
   %h2= @surf_spot.spot_full_name
   - unless @surf_spot.spot_cam_name = 'void'
     = render partial: "stream"
-  - unless @surf_spot.latest_report.generalcondition.empty?
+  - unless @surf_spot.latest_report.nil?
     = render partial: "report/report"
   - if @surf_spot.latest_forecast
     = render partial: "forecast/forecast_tiles"
+  - else
+    - @surf_spot.update_forecast
+    = render partial: 'forecast/forecast_tiles'
