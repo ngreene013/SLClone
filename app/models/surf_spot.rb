@@ -23,6 +23,14 @@ class SurfSpot < ActiveRecord::Base
     self.forecasts.create fore_json
   end
 
+  def update_report
+    pl = Payload.create_new_payload id
+    rpt_json = StringFunctions::transform_sl_keys! eval(pl.analysis)
+    rpt_json[:payload_id] = pl.id
+    rpt_json[:surf_spot_id] = pl.place_id
+    self.reports.create rpt_json
+  end
+
   def live_cam
     SlFunctions.get_cam_uri self.spot_cam_name
   end

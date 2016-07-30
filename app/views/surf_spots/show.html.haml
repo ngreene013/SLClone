@@ -1,9 +1,17 @@
 .show-spot-page
-  %h2= @surf_spot.spot_full_name
-  - unless @surf_spot.spot_cam_name = 'void'
+  %h2.spot-name= @surf_spot.spot_full_name
+  %button.refresh-repor= link_to 'refresh report', update_report_path, :remote => true
+  %button.refresh-forecast= link_to 'refresh forecast', update_forecast_path, :remote => true
+
+  - unless @surf_spot.spot_cam_name.nil?
     = render partial: "stream"
-  - unless @surf_spot.latest_report.nil?
+
+  - if @surf_spot.latest_report
     = render partial: "report/report"
+  - else
+    - @surf_spot.update_report
+    = render partial: 'report/report'
+
   - if @surf_spot.latest_forecast
     = render partial: "forecast/forecast_tiles"
   - else

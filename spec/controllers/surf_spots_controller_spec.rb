@@ -10,7 +10,7 @@ RSpec.describe SurfSpotsController, type: :controller do
   describe 'refresh forecast' do
 
     it 'refreshes the forecast' do
-      #get update_forecast_path(id: 4127)
+      get update_forecast_path(id: 4127)
 
     end
 

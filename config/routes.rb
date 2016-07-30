@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root 'surf_spots#index'
 
   get 'surf_spots/:id/update_forecast' => 'surf_spots#update_forecast', as: :update_forecast
+  get 'surf_spots/:id/update_report' => 'surf_spots#update_report', as: :update_report
 
   resources :surf_spots #, only: [:index, :show, :refresh_forecast]
 

@@ -138,9 +138,9 @@ links = [
     # Costa Rica
     # North Costa Rica  region_id = 2979
     # Central Costa Rica  region_id = 2164
-    ['Playa Grande', 'Playa Grande', 'void', 6637, 2979],
-    ['Avellanas', 'Avellanas', 'void', 6636, 2979],
-    ['Nosara - Guiones', 'Nosara', 'void', 5559, 2979],
+    ['Playa Grande', 'Playa Grande', nil, 6637, 2979],
+    ['Avellanas', 'Avellanas', nil, 6636, 2979],
+    ['Nosara - Guiones', 'Nosara', nil, 5559, 2979],
 ]
 
 

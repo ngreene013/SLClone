@@ -1,7 +1,5 @@
 .forecast-section
   %h3.forecast-label Forecast
-  %button.refresh-forecast= link_to 'refresh', update_forecast_path, :remote => true
-
   %h5.forecast-start-date= @surf_spot.latest_forecast.startdate_pretty_local
   %table.forecast-table
     %tr

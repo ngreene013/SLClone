@@ -17,4 +17,10 @@ class SurfSpotsController < ApplicationController
     render 'show'
   end
 
+  def update_report
+    @surf_spot = SurfSpot.find(params['id'])
+    @surf_spot.update_report
+    render 'show'
+  end
+
 end
