@@ -17,3 +17,9 @@
   - else
     - @surf_spot.update_forecast
     = render partial: 'forecast/forecast_tiles'
+
+  %img.tide_image.img-responsive{src:"http://tile.surfline.com/dashboard/tidebar_mobile.cfm?id=#{@surf_spot.id}&x=742&y=200&location=#{@surf_spot.latest_forecast.payload.get_tide_location}&units=e&tb_fontsize=12&tb_sunfontsize=12"}
+
+  %img.wind_image{src:"http://tile.surfline.com/dashboard/swells/4/1//iphoneinterpchart_wind_#{@surf_spot.id}_24_m_en_760_200.png"}
+
+//http://tile.surfline.com/dashboard/tidebar_mobile.cfm?id=4127&x=742&y=200&location=Ocean%20Beach%2C%20California&units=e&tb_fontsize=12&tb_sunfontsize=12

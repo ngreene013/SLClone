@@ -11,6 +11,11 @@ has_one :report
     Payload.create(trans_json)
   end
 
+  def get_tide_location
+    loc = eval self.location
+    loc['tide_location'] || ''
+  end
+
 
 
 end
