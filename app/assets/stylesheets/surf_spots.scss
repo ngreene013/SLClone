@@ -1,6 +1,7 @@
 // Place all the styles related to the surf_spot controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 .forecast-tile-day {
   border: solid blue 1px;
   font-size: .8em;
@@ -13,7 +14,8 @@
   width: 600px;
   overflow: auto;
   margin-top: 2%;
-  //border: 1px solid black;
+  -webkit-overflow-scrolling: touch;
+
 }
 
 .forecast-table {
@@ -67,15 +69,16 @@
 
 }
 
-button {
-  float: right;
+.refresh-buttons {
+  display: inline-block;
+  padding-bottom: 3px;
 }
 
 .spot-name{
-  float:right;
+padding-bottom: 3px;
 }
 
-img.tide_image{
+img.tide_image, img.wind_image{
   width: 70%;
   height: 150px;
   padding: 5px;
