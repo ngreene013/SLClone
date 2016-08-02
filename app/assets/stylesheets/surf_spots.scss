@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-div.forecast-tile-day {
+.forecast-tile-day {
   border: solid blue 1px;
   font-size: .8em;
   height: 250px;
@@ -75,6 +75,7 @@ div.forecast-tile-day {
 }
 
 .spot-name{
+  float: left;
 padding-bottom: 3px;
 }
 
@@ -83,3 +84,9 @@ img.tide_image, img.wind_image{
   height: 150px;
   padding: 5px;
 }
+
+.left-header{
+  display: inline-block;
+  float: left;
+}
+
