@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   get 'surf_spots/:id/update_forecast' => 'surf_spots#update_forecast', as: :update_forecast
   get 'surf_spots/:id/update_report' => 'surf_spots#update_report', as: :update_report
 
-  resources :surf_spots #, only: [:index, :show, :refresh_forecast]
+  resources :surf_spots do  #, only: [:index, :show, :refresh_forecast]
+   # collection do
+   #   get :id
+   # end
+  end
 
 
   # The priority is based upon order of creation: first created -> highest priority.

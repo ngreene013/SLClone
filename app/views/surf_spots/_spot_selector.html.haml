@@ -1,0 +1,7 @@
+.dropdown
+  %button.btn.btn-default.dropdown-toggle{ id:'dropdownMenu1', 'aria-haspopup': "true", 'aria-expanded': "true", data:{'toggle':'dropdown'} }
+    Select Spot
+    %span.caret
+  %ul.dropdown-menu{'aria-labelledby': "dropdownMenu1"}
+    -@surf_spots.each do |spot|
+      %li=link_to spot.spot_full_name, spot

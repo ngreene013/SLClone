@@ -8,6 +8,7 @@ class SurfSpotsController < ApplicationController
   end
 
   def show
+    @surf_spots = SurfSpot.all
     @surf_spot = SurfSpot.find(params['id'])
   end
 
