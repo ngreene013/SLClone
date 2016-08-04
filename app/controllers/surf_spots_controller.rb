@@ -15,12 +15,18 @@ class SurfSpotsController < ApplicationController
   def update_forecast
     @surf_spot = SurfSpot.find(params['id'])
     @surf_spot.update_forecast
+    respond_to do |format|
+      format.js
+    end
   end
 
   def update_report
     @surf_spot = SurfSpot.find(params['id'])
     @surf_spot.update_report
-    render :show
+#    render :show
+    respond_to do |format|
+      format.js
+    end
   end
 
 end

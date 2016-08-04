@@ -5,19 +5,21 @@
     %button.refresh-forecast= link_to 'refresh forecast', update_forecast_path, :remote => true
 
   - unless @surf_spot.spot_cam_name.nil?
-    = render partial: "stream"
+    = render partial: "stream", locals:{surf_spot: @surf_spot}
 
-  - if @surf_spot.latest_report
-    = render partial: "report/report"
-  - else
-    - @surf_spot.update_report
-    = render partial: 'report/report'
+  #surf_report
+    - if @surf_spot.latest_report
+      = render partial: "report/report", locals:{surf_spot: @surf_spot}
+    - else
+      - @surf_spot.update_report
+      = render partial: 'report/report', locals:{surf_spot: @surf_spot}
 
-  - if @surf_spot.latest_forecast
-    = render partial: "forecast/forecast_tiles"
-  - else
-    - @surf_spot.update_forecast
-    = render partial: 'forecast/forecast_tiles'
+  #surf_forecast
+    - if @surf_spot.latest_forecast
+      = render partial: "forecast/forecast_tiles", locals:{surf_spot: @surf_spot}
+    - else
+      - @surf_spot.update_forecast
+      = render partial: 'forecast/forecast_tiles', locals:{surf_spot: @surf_spot}
 
   %p
     %img.tide_image.img-responsive{src:"http://tile.surfline.com/dashboard/tidebar_mobile.cfm?id=#{@surf_spot.id}&x=742&y=200&location=#{@surf_spot.latest_forecast.payload.get_tide_location}&units=e&tb_fontsize=12&tb_sunfontsize=12"}

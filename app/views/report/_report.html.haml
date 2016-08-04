@@ -1,7 +1,7 @@
 .report-section
   %h3 Report
   %ul.report-details
-    - if @surf_spot.latest_report.is_current == 'true'
-      %li.report=@surf_spot.latest_report.reportdate
-      %li.report=@surf_spot.latest_report.generalcondition[0].humanize
-      %li.report=@surf_spot.latest_report.surfrange[0] + ', occassionally ' + @surf_spot.latest_report.occasional
+    - if surf_spot.latest_report.is_current == 'true'
+      %li.report=surf_spot.latest_report.reportdate
+      %li.report=surf_spot.latest_report.generalcondition[0].humanize
+      %li.report=surf_spot.latest_report.surfrange[0] + ', occassionally ' + surf_spot.latest_report.occasional
