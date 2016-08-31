@@ -142,14 +142,7 @@ links = [
     ['Avellanas', 'Avellanas', nil, 6636, 2979],
     ['Nosara - Guiones', 'Nosara', nil, 5559, 2979],
 ]
-
-
-# t.integer :spot_id
-# t.integer :region_id
-# t.string :spot_full_name
-# t.string :spot_city_name
-# t.string :spot_cam_name
 links.each do |entry|
   SurfSpot.create(spot_full_name: entry[0], spot_city_name: entry[1], spot_cam_name: entry[2], id: entry[3], region_id: entry[4])
+  LiveStream.create(surf_spot_id: entry[3], spot_cam_name: entry[2] )
 end
-

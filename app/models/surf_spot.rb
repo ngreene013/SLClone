@@ -6,6 +6,7 @@ class SurfSpot < ActiveRecord::Base
   has_many :region_forecasts
   has_many :forecasts, through: :region_forecasts, foreign_key: :region_id
   has_many :posts
+  #has_one :live_stream
 
   def latest_report
     self.reports.last

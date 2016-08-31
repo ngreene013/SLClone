@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160812220428) do
+ActiveRecord::Schema.define(version: 20160831173152) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,15 @@ ActiveRecord::Schema.define(version: 20160812220428) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end
+
+  create_table "live_streams", force: :cascade do |t|
+    t.integer  "surf_spot_id"
+    t.string   "spot_cam_name"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "live_streams", ["surf_spot_id"], name: "index_live_streams_on_surf_spot_id", using: :btree
 
   create_table "payloads", force: :cascade do |t|
     t.string   "timezonestring"
@@ -155,6 +164,7 @@ ActiveRecord::Schema.define(version: 20160812220428) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "live_streams", "surf_spots"
   add_foreign_key "posts", "surf_spots"
   add_foreign_key "posts", "users"
 end
