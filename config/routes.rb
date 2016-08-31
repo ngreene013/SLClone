@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'payloads/create'
+
   devise_for :users
   root 'surf_spots#index'
 
@@ -7,6 +9,7 @@ Rails.application.routes.draw do
   get 'surf_spots/:id/update_report' => 'surf_spots#update_report', as: :update_report
 
   resources :surf_spots do  #, only: [:index, :show, :refresh_forecast]
+    resources :posts
    # collection do
    #   get :id
    # end

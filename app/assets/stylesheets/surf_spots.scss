@@ -75,19 +75,23 @@
   padding-bottom: 3px;
 }
 
-.spot-name{
-  float: left;
-padding-bottom: 3px;
+.spot-name {
+  display: inline-block;
+
 }
 
-img.tide_image, img.wind_image{
+img.tide_image, img.wind_image {
   width: 70%;
   height: 150px;
   padding: 5px;
 }
 
-.left-header{
+.left-header {
   display: inline-block;
   float: left;
 }
 
+.cam-iframe {
+ float:left;
+  clear:both;
+}

@@ -1,7 +1,7 @@
 class Report < ActiveRecord::Base
 
-  has_one :payload
-  belongs_to :surf_spot
+  belongs_to :payload
+  has_one :surf_spot
 
   def self.refresh(spot_id)
     pl = Payload.create_new_payload spot_id

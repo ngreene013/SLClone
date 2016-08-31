@@ -1,0 +1,3 @@
+= form_for @post, :url => {:controller => 'posts', :action => 'create'} do |f|
+  = text_area(:post, :content, cols: 20, rows: 7)
+  = f.submit('Submit')

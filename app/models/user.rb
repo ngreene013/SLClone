@@ -3,7 +3,10 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  before_create :check_user_name
+  #before_create :check_user_name
+  has_many :posts
+
+
 
 
   def check_user_name

@@ -3,5 +3,6 @@
     Select Spot
     %span.caret
   %ul.dropdown-menu{'aria-labelledby': "dropdownMenu1"}
-    -@surf_spots.each do |spot|
-      %li=link_to spot.spot_full_name, spot
+    -unless @surf_spots.nil?
+      -@surf_spots.each do |spot|
+        %li=link_to spot.spot_full_name, spot
