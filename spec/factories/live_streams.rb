@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :live_stream do
+  factory :live_streams do
     
   end
 end

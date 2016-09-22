@@ -6,7 +6,7 @@ class SurfSpot < ActiveRecord::Base
   has_many :region_forecasts
   has_many :forecasts, through: :region_forecasts, foreign_key: :region_id
   has_many :posts
-  #has_one :live_stream
+  has_one :live_stream
 
   def latest_report
     self.reports.last
@@ -31,10 +31,6 @@ class SurfSpot < ActiveRecord::Base
     rpt_json[:payload_id] = pl.id
     rpt_json[:surf_spot_id] = pl.place_id
     self.reports.create rpt_json
-  end
-
-  def live_cam
-    SlFunctions.get_cam_uri self.spot_cam_name
   end
 
 end

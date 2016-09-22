@@ -8,8 +8,11 @@ Rails.application.routes.draw do
   get 'surf_spots/:id/update_forecast' => 'surf_spots#update_forecast', as: :update_forecast
   get 'surf_spots/:id/update_report' => 'surf_spots#update_report', as: :update_report
 
+  resource :live_stream, only: [:show]
+
   resources :surf_spots do  #, only: [:index, :show, :refresh_forecast]
     resources :posts
+    #resources :live_stream, only:[:show]
    # collection do
    #   get :id
    # end
