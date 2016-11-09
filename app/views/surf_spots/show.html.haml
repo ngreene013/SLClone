@@ -1,5 +1,5 @@
 .show-spot-page
-  %h2.spot-name= @surf_spot.spot_full_name
+  //%h2.spot-name= @surf_spot.spot_full_name
   .refresh-buttons
     %button.refresh-report= link_to 'refresh report', update_report_path, :remote => true
     %button.refresh-forecast= link_to 'refresh forecast', update_forecast_path, :remote => true
