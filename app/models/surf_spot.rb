@@ -13,8 +13,8 @@ class SurfSpot < ActiveRecord::Base
   end
 
   def latest_forecast
+    update_forecast
     self.forecasts.last
-
   end
 
   def update_forecast

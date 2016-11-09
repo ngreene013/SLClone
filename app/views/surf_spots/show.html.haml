@@ -4,8 +4,8 @@
     %button.refresh-report= link_to 'refresh report', update_report_path, :remote => true
     %button.refresh-forecast= link_to 'refresh forecast', update_forecast_path, :remote => true
 
-  - unless @surf_spot.spot_cam_name.nil?
-    = render partial: "stream", locals:{surf_spot: @surf_spot}
+  //- unless @surf_spot.spot_cam_name.nil?
+  //= render partial: "stream", locals:{surf_spot: @surf_spot}
 
   #spot_comment
     = button_to 'comment', new_surf_spot_post_path( surf_spot_id: 5127 )

@@ -11,6 +11,7 @@ class SurfSpotsController < ApplicationController
   end
 
   def update_forecast
+    @surf_spot = SurfSpot.find(params['id'])
     respond_to do |format|
       format.js
     end
