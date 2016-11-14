@@ -9,6 +9,7 @@ class SurfSpot < ActiveRecord::Base
   has_one :live_stream
 
   def latest_report
+    update_report
     self.reports.last
   end
 

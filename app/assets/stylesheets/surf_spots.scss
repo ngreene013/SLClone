@@ -61,6 +61,10 @@
 }
 
 .report-section {
+  display: inline-block;
+  float: left;
+  clear: both;
+
   ul.report-details {
 
   }
@@ -76,7 +80,7 @@
 }
 
 .spot-name {
-  display: inline-block;
+  //display: inline-block;
 
 }
 
