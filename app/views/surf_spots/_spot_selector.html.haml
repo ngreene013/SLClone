@@ -1,6 +1,9 @@
 .dropdown
   %button.btn.btn-default.dropdown-toggle{ id:'dropdownMenu1', 'aria-haspopup': "true", 'aria-expanded': "true", data:{'toggle':'dropdown'} }
-    %h2.spot-name= @surf_spot.spot_full_name
+    -if @surf_spot
+      %h2.spot-name= @surf_spot.spot_full_name
+    -else
+      %h2.spot-name='Select One'
     %span.caret
   %ul.dropdown-menu{'aria-labelledby': "dropdownMenu1"}
     -unless @surf_spots.nil?
