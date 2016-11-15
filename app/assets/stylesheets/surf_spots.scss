@@ -14,12 +14,12 @@
   width: 600px;
   overflow: auto;
   margin-top: 2%;
-  -webkit-overflow-scrolling: touch;
-
+  border: 5px solid black;
 }
 
 .forecast-table {
   width: 80%;
+  overflow: auto;
 
 }
 
@@ -76,11 +76,22 @@
 
 .refresh-buttons {
   display: inline-block;
-  padding-bottom: 3px;
+  padding: 3px;
+  float: left;
+  clear: both;
+}
+
+#spot_comment {
+  display: inline-block;
+  padding: 3px;
+  float: left;
+  clear: both;
+  color: #428bca;
 }
 
 .spot-name {
   //display: inline-block;
+  padding: 10px;
 
 }
 
@@ -96,6 +107,6 @@ img.tide_image, img.wind_image {
 }
 
 .cam-iframe {
- float:left;
-  clear:both;
+  float: left;
+  clear: both;
 }
