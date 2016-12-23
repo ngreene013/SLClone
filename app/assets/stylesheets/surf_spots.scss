@@ -1,6 +1,37 @@
 // Place all the styles related to the surf_spot controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$screen-lg-min: 1080px;
+$screen-md-min: 736px;
+$screen-sm-min: 10px;
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Sass Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  body {
+    background-color: red;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+  body {
+    background-color: orange;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
+  body {
+    background-color: lightgreen;
+  }
+  .header .navigation ul.primary-menu > li a {
+    font-size: 1.145em;
+    padding: 0 1.24em;
+  }
+}
 
 .forecast-tile-day {
   border: solid blue 1px;
