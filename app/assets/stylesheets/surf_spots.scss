@@ -13,6 +13,12 @@ $screen-sm-min: 10px;
   body {
     background-color: red;
   }
+  .dropdown-menu{
+    background-color: lightgrey;
+  }
+  .spot-name{
+    background-color: lightgrey;
+  }
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -20,12 +26,24 @@ $screen-sm-min: 10px;
   body {
     background-color: orange;
   }
+  .dropdown-menu{
+    background-color: lightgoldenrodyellow;
+  }
+  .spot-name{
+    background-color: lightgoldenrodyellow;
+  }
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: $screen-lg-min) {
   body {
     background-color: lightgreen;
+  }
+  .dropdown-menu{
+    background-color: lightseagreen;
+  }
+  .spot-name{
+    background-color: lightseagreen;
   }
   .header .navigation ul.primary-menu > li a {
     font-size: 1.145em;
