@@ -31,5 +31,8 @@
   %p
     %img.swell_image{src:"http://tile.surfline.com/dashboard/barchart_interp_wave.cfm?id=#{@surf_spot.id}&amp;x=760&y=200&units=e&markshimmy=-20&arrowshimmy=-20"}
 
+  %p
+    %img.threeday_image{src:"http://cdip.ucsd.edu/recent/model_images/fc_summary.png"}
+
   #spot_comment
     = button_to 'comment', new_surf_spot_post_path( surf_spot_id: @surf_spot.id )

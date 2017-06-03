@@ -51,12 +51,15 @@ $screen-sm-min: 10px;
   }
 }
 
+//div
 .forecast-tile-day {
   border: solid blue 1px;
   font-size: .8em;
   height: 250px;
   padding: 5px;
   text-align: center;
+  overflow: scroll;
+
 }
 
 .forecast-section {
@@ -69,7 +72,10 @@ $screen-sm-min: 10px;
 .forecast-table {
   width: 80%;
   overflow: auto;
+  td{
+    overflow: scroll;
 
+  }
 }
 
 .show-spot-page {

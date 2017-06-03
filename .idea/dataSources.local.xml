@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="PostgreSQL - SurfLine_development@localhost" uuid="b2b1e68e-7c18-4de6-9943-f12c89ece081">
+    <data-source name="PostgreSQL - postgres@localhost" uuid="a39c9f48-faca-44c3-990c-882494a74154">
       <database-info product="PostgreSQL" version="9.5.2" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
-      <resolve-scope>SurfLine_development:*</resolve-scope>
+      <resolve-scope>postgres:public</resolve-scope>
+    </data-source>
+    <data-source name="PostgreSQL - SurfLine_development@localhost" uuid="76874e8c-9ce1-4431-86c0-5d9a5f842c5a">
+      <database-info product="PostgreSQL" version="9.5.2" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <resolve-scope>SurfLine_development:public</resolve-scope>
     </data-source>
   </component>
 </project>
