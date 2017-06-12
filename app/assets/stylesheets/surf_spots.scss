@@ -12,6 +12,7 @@ $screen-sm-min: 10px;
 @media (min-width: $screen-sm-min) {
   body {
     background-color: red;
+    padding: 5%;
   }
   .dropdown-menu{
     background-color: lightgrey;
@@ -25,6 +26,8 @@ $screen-sm-min: 10px;
 @media (min-width: $screen-md-min) {
   body {
     background-color: orange;
+    padding: 5%;
+
   }
   .dropdown-menu{
     background-color: lightgoldenrodyellow;
@@ -38,6 +41,8 @@ $screen-sm-min: 10px;
 @media (min-width: $screen-lg-min) {
   body {
     background-color: lightgreen;
+    padding: 5%;
+
   }
   .dropdown-menu{
     background-color: lightseagreen;
@@ -51,15 +56,13 @@ $screen-sm-min: 10px;
   }
 }
 
-//div
 .forecast-tile-day {
   border: solid blue 1px;
   font-size: .8em;
   height: 250px;
   padding: 5px;
   text-align: center;
-  overflow: scroll;
-
+  overflow: auto;
 }
 
 .forecast-section {
@@ -72,10 +75,7 @@ $screen-sm-min: 10px;
 .forecast-table {
   width: 80%;
   overflow: auto;
-  td{
-    overflow: scroll;
 
-  }
 }
 
 .show-spot-page {
@@ -119,6 +119,10 @@ $screen-sm-min: 10px;
   display: inline-block;
   float: left;
   clear: both;
+  width: 600px;
+  overflow: auto;
+  margin-top: 2%;
+  border: 5px solid black;
 
   ul.report-details {
 
