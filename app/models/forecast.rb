@@ -24,18 +24,18 @@ class Forecast < ActiveRecord::Base
   #return an array of data for tiles formatted as html table contents
   def forecast_tiles(days=14)
 
-    #tiles = []
-    #(0...days).each do |day|
-  #    tiles << self.generalcondition[day] #.gsub(' ', '-'),
-      #tiles << "<td><div class='forecast-tile-day #{self.generalcondition[day].gsub(' ', '-')}' title='#{self.generaltext[day]}'>
-    #    <div class='forecast-day'>#{Forecast.display_day(self.surfrange[day])}</div>
-  #      <p>#{self.generalcondition[day].humanize}</p>
-#        #{self.surfrange[day].humanize}
+    tiles = []
+    (0...days).each do |day|
+      #tiles << self.generalcondition[day] #.gsub(' ', '-'),
+      tiles << "<td><div class='forecast-tile-day #{self.generalcondition[day].gsub(' ', '-')}' title='#{self.generaltext[day]}'>
+        <div class='forecast-day'>#{Forecast.display_day(self.surfrange[day])}</div>
+        <p>#{self.generalcondition[day].humanize}</p>
+        #{self.surfrange[day].humanize}
         #<p>#{self.surftext[day].humanize}.<br></p>
         #<p>#{self.generaltext[day]}<td>"
-  #  end
-    #tiles.join('').html_safe || 'sorry, no forecast here'
-    forecast = self
+    end
+    tiles.join('').html_safe || 'sorry, no forecast here'
+    #forecast = self
   end
 
 

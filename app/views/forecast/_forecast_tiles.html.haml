@@ -4,26 +4,4 @@
   %table.forecast-table
     %tr
       .spot-forecast
-      - if surf_spot.latest_forecast
-        - forecast = surf_spot.forecasts.last
-        - (0...14).each do |day|
-          .forecast-tile-day= self.inspect
-
-
-
-        //- forecast.generalcondition.compact.each do |c_day|
-        //  %td.forecast-tile-day=c_day.humanize
-
-
-
-
-      //tiles = []
-      //(0...days).each do |day|
-      //  tiles << "<td><div class='forecast-tile-day #{self.generalcondition[day].gsub(' ', '-')}' title='#{self.generaltext[day]}'>
-      //    <div class='forecast-day'>#{Forecast.display_day(self.surfrange[day])}</div>
-      //    <p>#{self.generalcondition[day].humanize}</p>
-      //    #{self.surfrange[day].humanize}
-      //    <p>#{self.surftext[day].humanize}.<br></p>
-      //    <p>#{self.generaltext[day]}<td>"
-      //end
-      //tiles.join('').html_safe || 'sorry, no forecast here'
+      = surf_spot.latest_forecast.forecast_tiles if surf_spot.latest_forecast
