@@ -11,7 +11,7 @@ module SlFunctions
 
 
 # resources: surf, analysis, tide, wind
-  def self.set_report_uri(spot_or_region_id, days = 14, resources ='wind, surf, analysis, tide')
+  def self.set_report_uri(spot_or_region_id, days = 17, resources ='wind, surf, analysis, tide')
     URI("http://api.surfline.com/v1/forecasts/#{spot_or_region_id}?resources=#{resources}&days=#{days}&getAllSpots=false&units=e&interpolate=false&showOptimal=false")
   end
 

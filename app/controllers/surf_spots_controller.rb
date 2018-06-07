@@ -5,6 +5,7 @@ class SurfSpotsController < ApplicationController
 
   end
 
+  # sets the spot it and gets the list of available spots
   def show
     @surf_spot = SurfSpot.find(params['id'])
     @surf_spots = SurfSpot.all

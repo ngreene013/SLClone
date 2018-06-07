@@ -18,6 +18,11 @@ class SurfSpot < ActiveRecord::Base
     self.forecasts.last
   end
 
+  def has_latest_forecast?
+
+  end
+
+
   def update_forecast
     pl = Payload.create_new_payload region_id
     fore_json = StringFunctions::transform_sl_keys! eval(pl.analysis)
