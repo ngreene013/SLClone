@@ -1,9 +1,7 @@
 source 'https://rubygems.org'
 
-#ruby '~> 2.4.4'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.6'
+gem 'rails', '4.2.7.1'
 #gem 'rails', '5.1.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
@@ -27,8 +25,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bootstrap-sass',       '3.2.0.0'
 gem 'haml-rails'
-
-
+gem 'actionview','~> 4.2.7.1'
+gem 'activerecord', '~> 4.2.7.1'
 
 # rails generate devise:install
 # rails generate devise MODEL
